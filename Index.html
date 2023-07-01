@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RECURSION</title>
+  </head>
+  <body>
+    <script src="app.js">
+         function isPalindrome(word) {
+         // Remove any non-alphanumeric characters and convert to lowercase
+         const cleanedWord = word.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+         // Compare the cleaned word with its reversed version
+         const reversedWord = cleanedWord.split('').reverse().join('');
+
+        return cleanedWord === reversedWord;
+         }
+
+       // Example usage:
+       const word1 = "gag";
+       const word2 = "kayak";
+       const word3 = "php";
+       const word4 = "radar";
+       const word5 = "hello";
+
+
+
+      console.log(isPalindrome(word1)); // true
+      console.log(isPalindrome(word2)); // true
+      console.log(isPalindrome(word3)); // true
+      console.log(isPalindrome(word4)); // true
+      console.log(isPalindrome(word5)); // false
+    </script>
+  </body>
+</html>
